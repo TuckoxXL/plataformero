@@ -43,7 +43,7 @@ public class Player : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Pinchos"))
         {
-            SceneManager.LoadScene("");
+            SceneManager.LoadScene("Derrota");
         }
     }
 
