@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
             canjump = true;
         }
 
-        if (collision.gameObject.CompareTag("Pinchos"))
+        if (collision.gameObject.tag =="Pinchos")
         {
             SceneManager.LoadScene("Derrota");
         }
