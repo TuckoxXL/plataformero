@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        canjump = true;
+        canjump = false;
     }
 
     // Update is called once per frame
@@ -27,21 +27,21 @@ public class Player : MonoBehaviour
         //verticalforce *= Time.deltaTime;
         transform.Translate(horizontalforce, 0, 0);
 
-        if (Input.GetKeyDown(KeyCode.Space) && canjump)
+        if (Input.GetKeyDown(KeyCode.Space) && canjump == false)
         {
             GetComponent<Rigidbody2D>().velocity = new Vector3(0, jumforce, 0);
             canjump = true;
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Floor"))
+        if (collision.gameObject.tag == "Floor")
         {
-            canjump = true;
+            canjump = false;
         }
 
-        if (collision.gameObject.tag =="Pinchos")
+        if (collision.gameObject.tag == "Pinchos")
         {
             SceneManager.LoadScene("Derrota");
         }
