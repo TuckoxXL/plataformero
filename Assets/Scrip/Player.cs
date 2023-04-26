@@ -51,7 +51,7 @@ public class Player : MonoBehaviour
     {
         if (other.tag == "zonaVic")
         {
-            SceneManager.LoadScene("");
+            SceneManager.LoadScene("Victoria");
             Debug.Log("entraste");
 
         }
