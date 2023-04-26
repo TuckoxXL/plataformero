@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Floor
   - Pinchos
+  - zonaVic
   layers:
   - Default
   - TransparentFX
