@@ -5,6 +5,7 @@ using UnityEngine;
 public class diamante : MonoBehaviour
 {
     public Timer _timer;
+  
 
     // Start is called before the first frame update
     void Start()
