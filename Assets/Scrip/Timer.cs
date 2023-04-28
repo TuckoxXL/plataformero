@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-    public float timer = 0;
+    public float timer = 20;
+    
 
     public Text textoTimer;
 
@@ -14,5 +16,10 @@ public class Timer : MonoBehaviour
     {
         timer -= Time.deltaTime;
         textoTimer.text = "" + timer.ToString("f0");
+
+        if (timer <= 0)
+        {
+            SceneManager.LoadScene("Derrota");
+        }
     }
 }

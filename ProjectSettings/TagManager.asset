@@ -7,6 +7,7 @@ TagManager:
   - Floor
   - Pinchos
   - zonaVic
+  - limite
   layers:
   - Default
   - TransparentFX
