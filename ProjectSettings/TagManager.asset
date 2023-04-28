@@ -8,6 +8,8 @@ TagManager:
   - Pinchos
   - zonaVic
   - limite
+  - diamante
+  - timer
   layers:
   - Default
   - TransparentFX

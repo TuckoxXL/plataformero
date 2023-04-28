@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class diamante : MonoBehaviour
 {
+    public Timer _timer;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        _timer = GameObject.FindGameObjectWithTag("timer").GetComponent<Timer>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-
+        if (other.gameObject.CompareTag("Player"))
+        {
+            _timer.sumarTiempo();
+            Destroy(gameObject);
+        }
     }
 }

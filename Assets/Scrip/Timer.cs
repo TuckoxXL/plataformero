@@ -22,4 +22,9 @@ public class Timer : MonoBehaviour
             SceneManager.LoadScene("Derrota");
         }
     }
+
+    public void sumarTiempo()
+    {
+        timer += 10;
+    }
 }
