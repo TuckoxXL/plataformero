@@ -55,5 +55,10 @@ public class Player : MonoBehaviour
             Debug.Log("entraste");
 
         }
+
+        if (other.tag == "limite")
+        {
+            SceneManager.LoadScene("Derrota");
+        }
     }
 }
